@@ -1,15 +1,87 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import Dz1.impl.Car;
+import Dz1.impl.Plane;
+import Dz2.impl.Employee;
+import Dz2.impl.Freelancer;
+import Dz3.animal.IAnimal;
+import Dz3.animal.impl.Bird;
+import Dz3.animal.impl.Cat;
+import Dz3.animal.impl.Dog;
+import Dz4.move.impl.Vehicle;
+import Dz5.impl.ElectricCar;
+import Dz5.impl.WashingMachine;
+import Dz6.impl.Developer;
+
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        dz1();
+        dz2();
+        dz3();
+        dz4();
+        dz5();
+        dz6();
+    }
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+    private static void dz1() {
+        System.out.println();
+        System.out.println("DZ1");
+        Car car = new Car();
+        Plane plane = new Plane();
+        car.drive();
+        plane.fly();
+        plane.drive();
+    }
+
+    private static void dz2() {
+        System.out.println();
+        System.out.println("DZ2");
+        Employee employee = new Employee();
+        Freelancer freelancer = new Freelancer();
+        employee.work();
+        employee.getPaid();
+        freelancer.work();
+        freelancer.getPaid();
+    }
+
+    private static void dz3() {
+        System.out.println();
+        System.out.println("DZ3");
+        IAnimal[] animals = new IAnimal[3];
+        animals[0] = new Cat();
+        animals[1] = new Dog();
+        animals[2] = new Bird();
+        for (IAnimal animal : animals) {
+            animal.speak();
         }
+    }
+
+    private static void dz4() {
+        System.out.println();
+        System.out.println("DZ4");
+        Vehicle vehicle = new Vehicle();
+        Dz4.move.impl.Car car = new Dz4.move.impl.Car();
+        vehicle.move();
+        car.move();
+        car.drive();
+    }
+
+    private static void dz5() {
+        System.out.println();
+        System.out.println("DZ5");
+        WashingMachine washingMachine = new WashingMachine();
+        ElectricCar electricCar = new ElectricCar();
+        washingMachine.turnOn();
+        washingMachine.recharge();
+        washingMachine.turnOff();
+        electricCar.turnOn();
+        electricCar.recharge();
+        electricCar.turnOff();
+    }
+
+    private static void dz6() {
+        System.out.println();
+        System.out.println("DZ6");
+        Developer developer = new Developer("Олег", 26);
+        developer.getSalary();
+        developer.work();
     }
 }

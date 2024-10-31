@@ -1,2 +1,5 @@
-package Dz5;public interface IRechargeable {
+package Dz5;
+
+public interface IRechargeable {
+    public void recharge();
 }

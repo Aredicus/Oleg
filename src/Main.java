@@ -10,6 +10,8 @@ import Dz4.move.impl.Vehicle;
 import Dz5.impl.ElectricCar;
 import Dz5.impl.WashingMachine;
 import Dz6.impl.Developer;
+import Dz7.impl.BMW;
+import Dz7.impl.Tesla;
 
 public class Main {
     public static void main(String[] args) {
@@ -83,5 +85,14 @@ public class Main {
         Developer developer = new Developer("Олег", 26);
         developer.getSalary();
         developer.work();
+    }
+
+    private static void dz7() {
+        System.out.println();
+        System.out.println("DZ7");
+        BMW bmw = new BMW();
+        Tesla tesla = new Tesla();
+        bmw.displayInfo();
+        tesla.displayInfo();
     }
 }

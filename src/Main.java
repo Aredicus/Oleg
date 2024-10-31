@@ -21,6 +21,7 @@ public class Main {
         dz4();
         dz5();
         dz6();
+        dz7();
     }
 
     private static void dz1() {
